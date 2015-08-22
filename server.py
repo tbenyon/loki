@@ -1,10 +1,12 @@
 import web
 
+render = web.template.render('templates/')
+
 urls = ("/door", "door")
 
 class door:
     def GET(self):
-        return "Door status: Locked"
+        return render.door()
 
 
 if __name__ == "__main__":
